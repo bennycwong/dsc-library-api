@@ -2,7 +2,7 @@ class Book < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
   belongs_to :owner
-  validates :name, presence: true
+  validates :title, presence: true
   validates :owner, presence: true
 
   def all_tags=(names)
